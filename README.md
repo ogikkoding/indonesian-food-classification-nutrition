@@ -1,451 +1,322 @@
-\# 🍽️ Klasifikasi Citra Makanan Indonesia Menggunakan Hybrid Transfer Learning ResNet50 dan Support Vector Machine (SVM)
+# 🍽️ Indonesian Food Image Classification Using Hybrid Transfer Learning ResNet50 and Support Vector Machine (SVM)
+
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-red)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-orange)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-SVM-f7931e)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-> Sistem klasifikasi citra makanan khas Indonesia berbasis Web Streamlit menggunakan metode Hybrid Transfer Learning ResNet50 sebagai Feature Extractor dan Support Vector Machine (SVM) sebagai Classifier serta penyajian informasi nilai gizi secara otomatis.
+> A web based Indonesian food image classification system built with Streamlit using a hybrid approach that combines ResNet50 as a feature extractor and Support Vector Machine (SVM) as the classifier, with automatic nutritional information retrieval.
 
-\---
+---
 
-\# 📖 Deskripsi
+# 📖 Description
 
-Proyek ini bertujuan untuk membangun sistem klasifikasi citra makanan khas Indonesia menggunakan kombinasi metode \*\*Deep Learning\*\* dan \*\*Machine Learning\*\*.
+This project aims to develop an Indonesian food image classification system by combining **Deep Learning** and **Machine Learning** techniques.
 
-Model \*\*ResNet50\*\* digunakan sebagai \*feature extractor\* untuk mengekstraksi fitur visual dari citra makanan, kemudian fitur tersebut diklasifikasikan menggunakan \*\*Support Vector Machine (SVM)\*\*.
+The **ResNet50** model is utilized as a feature extractor to obtain visual features from food images. These extracted features are then classified using a **Support Vector Machine (SVM)**.
 
-Selain melakukan klasifikasi, sistem juga menampilkan informasi nilai gizi makanan secara otomatis berdasarkan database gizi Indonesia sehingga pengguna dapat mengetahui kandungan nutrisi dari makanan yang diprediksi.
+In addition to food classification, the application automatically displays nutritional information based on an Indonesian food nutrition database, allowing users to view the nutritional content of the predicted food.
 
-\---
+---
 
-\# 🖼️ Tampilan Aplikasi Streamlit
+# 🖼️ Streamlit Application Preview
 
-\### Halaman Utama
+### Home Page
 
-> Tampilan awal aplikasi sebelum proses prediksi.
+> The application's main page before prediction.
 
-!\[Halaman Utama](images/home.png)
+![Home](images/home.png)
 
-\---
+---
 
-\### Hasil Prediksi
+### Prediction Result
 
-> Hasil klasifikasi makanan beserta tingkat kepercayaan (Confidence Score).
+> Predicted food category along with its confidence score.
 
-!\[Prediksi](images/prediksi.png)
+![Prediction](images/prediksi.png)
 
-\---
+---
 
-\### Informasi Nilai Gizi
+### Nutritional Information
 
-> Informasi energi, protein, lemak, dan karbohidrat yang ditampilkan secara otomatis.
+> Automatically displays calories, protein, fat, and carbohydrates.
 
-!\[Nilai Gizi](images/gizi.png)
+![Nutrition](images/gizi.png)
 
-\---
+---
 
-\# ✨ Fitur
+# ✨ Features
 
-\- 📤 Upload citra makanan Indonesia
+- 📤 Upload Indonesian food images
+- 🤖 Automatic food classification using ResNet50 + SVM
+- 📊 Display prediction confidence score
+- 🥗 Show nutritional information
+- 🔥 Display calories, protein, fat, and carbohydrates
+- 💾 Download prediction results
+- 🌐 User-friendly Streamlit web interface
 
-\- 🤖 Klasifikasi otomatis menggunakan ResNet50 + SVM
+---
 
-\- 📊 Menampilkan Confidence Score
+# 🧠 Methods
 
-\- 🥗 Menampilkan informasi nilai gizi
+## Deep Learning
 
-\- 🔥 Menampilkan energi (kalori)
+- Transfer Learning
+- ResNet50
+- Feature Extraction
 
-\- 🥩 Menampilkan protein
+## Machine Learning
 
-\- 🧈 Menampilkan lemak
+- StandardScaler
+- Support Vector Machine (SVM)
 
-\- 🍚 Menampilkan karbohidrat
+---
 
-\- 💾 Mengunduh hasil prediksi
-
-\- 🌐 Antarmuka berbasis Streamlit
-
-\---
-
-\# 🧠 Metode
-
-\## Deep Learning
-
-\- Transfer Learning
-
-\- ResNet50
-
-\- Feature Extraction
-
-\## Machine Learning
-
-\- StandardScaler
-
-\- Support Vector Machine (SVM)
-
-\---
-
-\# 🔄 Pipeline Sistem
+# 🔄 System Pipeline
 
 ```text
-
 Dataset
-
-&#x20;   │
-
-&#x20;   ▼
-
+   │
+   ▼
 Image Preprocessing
-
-&#x20;   │
-
-&#x20;   ▼
-
+   │
+   ▼
 Transfer Learning ResNet50
-
-&#x20;   │
-
-&#x20;   ▼
-
+   │
+   ▼
 Feature Extraction
-
-&#x20;   │
-
-&#x20;   ▼
-
+   │
+   ▼
 Feature Vector
-
-&#x20;   │
-
-&#x20;   ▼
-
+   │
+   ▼
 StandardScaler
-
-&#x20;   │
-
-&#x20;   ▼
-
+   │
+   ▼
 Support Vector Machine
-
-&#x20;   │
-
-&#x20;   ▼
-
-Prediksi Jenis Makanan
-
-&#x20;   │
-
-&#x20;   ▼
-
-Pencarian Database Gizi
-
-&#x20;   │
-
-&#x20;   ▼
-
-Informasi Nilai Gizi
-
-&#x20;   │
-
-&#x20;   ▼
-
-Aplikasi Streamlit
-
+   │
+   ▼
+Food Classification
+   │
+   ▼
+Nutrition Database Lookup
+   │
+   ▼
+Nutritional Information
+   │
+   ▼
+Streamlit Web Application
 ```
 
-\---
+---
 
-\## 🖼️ Diagram Pipeline
+## 🖼️ Pipeline Diagram
 
-!\[Pipeline](images/pipeline.png)
+![Pipeline](images/pipeline.png)
 
-\---
+---
 
-\# 🏗️ Arsitektur Sistem
+# 🏗️ System Architecture
 
 ```text
-
-Citra Makanan
-
-&#x20;     │
-
-&#x20;     ▼
-
+Food Image
+     │
+     ▼
 Image Preprocessing
-
-&#x20;     │
-
-&#x20;     ▼
-
+     │
+     ▼
 ResNet50
-
-&#x20;     │
-
-&#x20;     ▼
-
+     │
+     ▼
 Feature Extraction
-
-&#x20;     │
-
-&#x20;     ▼
-
+     │
+     ▼
 Feature Vector
-
-&#x20;     │
-
-&#x20;     ▼
-
+     │
+     ▼
 StandardScaler
-
-&#x20;     │
-
-&#x20;     ▼
-
+     │
+     ▼
 Support Vector Machine
-
-&#x20;     │
-
-&#x20;     ▼
-
-Prediksi
-
-&#x20;     │
-
-&#x20;     ▼
-
-Database Nilai Gizi
-
-&#x20;     │
-
-&#x20;     ▼
-
-Informasi Gizi
-
-&#x20;     │
-
-&#x20;     ▼
-
-Web Streamlit
-
+     │
+     ▼
+Prediction
+     │
+     ▼
+Nutrition Database
+     │
+     ▼
+Nutritional Information
+     │
+     ▼
+Streamlit Web Application
 ```
 
-\---
+---
 
-\## 🖼️ Diagram Arsitektur
+## 🖼️ Architecture Diagram
 
-!\[Arsitektur](images/architecture.png)
+![Architecture](images/architecture.png)
 
-\---
+---
 
-\# ⚙️ Alur Kerja Sistem
+# ⚙️ System Workflow
 
-1\. Pengguna mengunggah citra makanan.
+1. The user uploads a food image.
+2. The system preprocesses the image.
+3. ResNet50 extracts image features.
+4. The extracted feature vector is normalized using StandardScaler.
+5. Support Vector Machine performs the classification.
+6. The system retrieves nutritional information based on the predicted food.
+7. The nutritional information is displayed to the user.
 
-2\. Sistem melakukan preprocessing citra.
+---
 
-3\. ResNet50 mengekstraksi fitur citra.
-
-4\. Feature vector dinormalisasi menggunakan StandardScaler.
-
-5\. Support Vector Machine melakukan klasifikasi.
-
-6\. Sistem mencari data gizi sesuai hasil prediksi.
-
-7\. Informasi nilai gizi ditampilkan kepada pengguna.
-
-\---
-
-\# 📂 Struktur Folder
+# 📂 Project Structure
 
 ```text
-
 project/
 
-├── STREAMLIT NILAI GIZI/
-
+├── STREAMLIT NUTRITION/
 │   ├── app.py
-
 │   └── run.bat
-
 │
-
 ├── DATASET/
-
-│   └── database\_nilai\_gizi\_makanan\_indonesia.xlsx
-
+│   └── indonesian_food_nutrition_database.xlsx
 │
-
 ├── MODELS/
-
-│   ├── svm\_model.pkl
-
+│   ├── svm_model.pkl
 │   ├── scaler.pkl
-
-│   └── class\_indices.pkl
-
+│   └── class_indices.pkl
 │
-
-├── images/
-
+├── IMAGES/
 │   ├── home.png
-
 │   ├── prediksi.png
-
 │   ├── gizi.png
-
 │   ├── pipeline.png
-
 │   ├── architecture.png
-
 │   ├── dataset.png
-
 │   └── output.png
-
 │
-
 ├── requirements.txt
-
 └── README.md
-
 ```
 
-\---
+---
 
-\# 🛠️ Teknologi yang Digunakan
+# 🛠️ Technologies Used
 
-\- Python
+- Python
+- Streamlit
+- PyTorch
+- TIMM
+- ResNet50
+- Scikit-learn
+- Support Vector Machine (SVM)
+- Pandas
+- NumPy
+- Pillow
 
-\- Streamlit
+---
 
-\- PyTorch
+# 📊 Dataset
 
-\- TIMM
+The dataset used in this project was collected from multiple sources to support Indonesian food image classification.
 
-\- ResNet50
+## Data Sources
 
-\- Scikit-Learn
+- Indonesian Food Image Dataset (Kaggle):
+  https://www.kaggle.com/datasets/putriayusalsabila/datasetpenelitian
 
-\- Support Vector Machine (SVM)
+- Food Nutrition Reference:
+  https://www.fatsecret.co.id/
 
-\- Pandas
+The nutritional information includes:
 
-\- NumPy
+- Calories (Energy)
+- Protein
+- Fat
+- Carbohydrates
 
-\- Pillow
+---
 
-\---
+## 🖼️ Sample Dataset
 
-\# 📊 Dataset
+![Dataset](images/dataset.png)
 
-Dataset yang digunakan berasal dari beberapa sumber untuk mendukung proses klasifikasi citra makanan Indonesia.
+---
 
-## Sumber Data
+# 📋 System Output
 
-\- Dataset gambar makanan Indonesia (Kaggle): https://www.kaggle.com/datasets/putriayusalsabila/datasetpenelitian
+The application provides:
 
-\- Referensi data nutrisi makanan: https://www.fatsecret.co.id/
+- Predicted Food Name
+- Confidence Score
+- Calories
+- Protein
+- Fat
+- Carbohydrates
 
-Informasi yang digunakan meliputi:
+---
 
-\- Energi
+## 🖼️ Sample Output
 
-\- Protein
+![Output](images/output.png)
 
-\- Lemak
+---
 
-\- Karbohidrat
+# 🚀 Getting Started
 
-\---
-
-\## 🖼️ Contoh Dataset
-
-!\[Dataset](images/dataset.png)
-
-\---
-
-\# 📋 Hasil Keluaran Sistem
-
-Sistem menghasilkan:
-
-\- Nama makanan
-
-\- Confidence Score
-
-\- Energi
-
-\- Protein
-
-\- Lemak
-
-\- Karbohidrat
-
-\---
-
-\## 🖼️ Contoh Hasil Sistem
-
-!\[Output](images/output.png)
-
-\---
-
-\# 🚀 Cara Menjalankan Aplikasi
-
-\## Clone Repository
+## Clone the Repository
 
 ```bash
-
 git clone https://github.com/username/project.git
-
 ```
 
-\## Install Library
+## Install Dependencies
 
 ```bash
-
 pip install -r requirements.txt
-
 ```
 
-\## Menjalankan Streamlit
+## Run the Streamlit Application
 
 ```bash
-
 streamlit run app.py
-
 ```
 
-\---
+---
 
-\# 💻 Platform Pengembangan
+# 💻 Development Environment
 
-\- Google Colab
+- Google Colab
+- Visual Studio Code
+- Google Drive
+- Streamlit
 
-\- Visual Studio Code
+---
 
-\- Google Drive
+# 👨‍💻 Developer
 
-\- Streamlit
+**Yogi Irawan**
 
-\---
+🎓 Bachelor's Student in Informatics
 
-\# 👨‍💻 Pengembang
-
-\*\*Yogi Irawan\*\*
-
-🎓 Mahasiswa S1 Informatika
-
-🤖 Bidang Minat: Artificial Intelligence & Computer Vision
+🤖 Research Interests: Artificial Intelligence & Computer Vision
 
 📧 Email: yogiirawan490@gmail.com
 
-💼 LinkedIn: https://www.linkedin.com/in/yogi-irawan-ab146a387
+💼 LinkedIn:
+https://www.linkedin.com/in/yogi-irawan-ab146a387
 
-🐙 GitHub: https://github.com/username
+🐙 GitHub:
+https://github.com/username
 
-\---
+---
 
-\# 📄 Lisensi
+# 📄 License
 
-PMIT License
-Copyright (c) 2026 Yogi irawan
+MIT License
+
+Copyright (c) 2026 Yogi Irawan
