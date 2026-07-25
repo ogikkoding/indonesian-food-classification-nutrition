@@ -26,7 +26,7 @@ In addition to food classification, the application automatically displays nutri
 
 > The application's main page before prediction.
 
-![Home](images/home.png)
+![Home](IMAGES/home.png)
 
 ---
 

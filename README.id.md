@@ -26,23 +26,23 @@ Selain melakukan klasifikasi makanan, aplikasi ini juga secara otomatis menampil
 
 > Tampilan awal aplikasi sebelum proses klasifikasi dilakukan.
 
-![Home](images/home.png)
+![Home](IMAGES/home.png)
 
 ---
 
-## Hasil Prediksi
+## Hasil Prediksi dan Informasi Nilai Gizi
 
 > Menampilkan hasil klasifikasi beserta tingkat kepercayaan (confidence score).
 
-![Prediction](images/prediksi.png)
+![Prediction](IMAGES/prediksi.png)
 
 ---
 
-## Informasi Nilai Gizi
+### 🎥 Live Demo / Workflow
 
-> Menampilkan informasi kandungan kalori, protein, lemak, dan karbohidrat berdasarkan hasil prediksi.
+> Proses klasifikasi interaktif mulai dari pengunggahan gambar hingga evaluasi nilai gizi.
 
-![Nutrition](images/gizi.png)
+![Demo Application](IMAGES/demo.gif)
 
 ---
 
