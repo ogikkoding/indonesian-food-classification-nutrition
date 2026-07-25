@@ -1,90 +1,51 @@
 \# 🍽️ Klasifikasi Citra Makanan Indonesia Menggunakan Hybrid Transfer Learning ResNet50 dan Support Vector Machine (SVM)
-
-
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-red)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.x-orange)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-SVM-f7931e)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 > Sistem klasifikasi citra makanan khas Indonesia berbasis Web Streamlit menggunakan metode Hybrid Transfer Learning ResNet50 sebagai Feature Extractor dan Support Vector Machine (SVM) sebagai Classifier serta penyajian informasi nilai gizi secara otomatis.
 
-
-
 \---
-
-
 
 \# 📖 Deskripsi
 
-
-
 Proyek ini bertujuan untuk membangun sistem klasifikasi citra makanan khas Indonesia menggunakan kombinasi metode \*\*Deep Learning\*\* dan \*\*Machine Learning\*\*.
-
-
 
 Model \*\*ResNet50\*\* digunakan sebagai \*feature extractor\* untuk mengekstraksi fitur visual dari citra makanan, kemudian fitur tersebut diklasifikasikan menggunakan \*\*Support Vector Machine (SVM)\*\*.
 
-
-
 Selain melakukan klasifikasi, sistem juga menampilkan informasi nilai gizi makanan secara otomatis berdasarkan database gizi Indonesia sehingga pengguna dapat mengetahui kandungan nutrisi dari makanan yang diprediksi.
-
-
 
 \---
 
-
-
-\# 🖼️ Tampilan Aplikasi
-
-
+\# 🖼️ Tampilan Aplikasi Streamlit
 
 \### Halaman Utama
 
-
-
 > Tampilan awal aplikasi sebelum proses prediksi.
-
-
 
 !\[Halaman Utama](images/home.png)
 
-
-
 \---
-
-
 
 \### Hasil Prediksi
 
-
-
 > Hasil klasifikasi makanan beserta tingkat kepercayaan (Confidence Score).
-
-
 
 !\[Prediksi](images/prediksi.png)
 
-
-
 \---
-
-
 
 \### Informasi Nilai Gizi
 
-
-
 > Informasi energi, protein, lemak, dan karbohidrat yang ditampilkan secara otomatis.
-
-
 
 !\[Nilai Gizi](images/gizi.png)
 
-
-
 \---
 
-
-
 \# ✨ Fitur
-
-
 
 \- 📤 Upload citra makanan Indonesia
 
@@ -106,19 +67,11 @@ Selain melakukan klasifikasi, sistem juga menampilkan informasi nilai gizi makan
 
 \- 🌐 Antarmuka berbasis Streamlit
 
-
-
 \---
-
-
 
 \# 🧠 Metode
 
-
-
 \## Deep Learning
-
-
 
 \- Transfer Learning
 
@@ -126,25 +79,15 @@ Selain melakukan klasifikasi, sistem juga menampilkan informasi nilai gizi makan
 
 \- Feature Extraction
 
-
-
 \## Machine Learning
-
-
 
 \- StandardScaler
 
 \- Support Vector Machine (SVM)
 
-
-
 \---
 
-
-
 \# 🔄 Pipeline Sistem
-
-
 
 ```text
 
@@ -212,27 +155,15 @@ Aplikasi Streamlit
 
 ```
 
-
-
 \---
-
-
 
 \## 🖼️ Diagram Pipeline
 
-
-
 !\[Pipeline](images/pipeline.png)
-
-
 
 \---
 
-
-
 \# 🏗️ Arsitektur Sistem
-
-
 
 ```text
 
@@ -300,27 +231,15 @@ Web Streamlit
 
 ```
 
-
-
 \---
-
-
 
 \## 🖼️ Diagram Arsitektur
 
-
-
 !\[Arsitektur](images/architecture.png)
-
-
 
 \---
 
-
-
 \# ⚙️ Alur Kerja Sistem
-
-
 
 1\. Pengguna mengunggah citra makanan.
 
@@ -336,21 +255,13 @@ Web Streamlit
 
 7\. Informasi nilai gizi ditampilkan kepada pengguna.
 
-
-
 \---
 
-
-
 \# 📂 Struktur Folder
-
-
 
 ```text
 
 project/
-
-
 
 ├── STREAMLIT NILAI GIZI/
 
@@ -400,15 +311,9 @@ project/
 
 ```
 
-
-
 \---
 
-
-
 \# 🛠️ Teknologi yang Digunakan
-
-
 
 \- Python
 
@@ -430,37 +335,19 @@ project/
 
 \- Pillow
 
-
-
 \---
-
-
 
 \# 📊 Dataset
 
-
-
 Dataset yang digunakan berasal dari beberapa sumber untuk mendukung proses klasifikasi citra makanan Indonesia.
 
+## Sumber Data
 
+\- Dataset gambar makanan Indonesia (Kaggle): https://www.kaggle.com/datasets/putriayusalsabila/datasetpenelitian
 
-\## Sumber Dataset
-
-
-
-\- Dataset Penelitian Makanan Indonesia (Kaggle)
-
-\- FatSecret Indonesia
-
-
-
-\### Database Nilai Gizi
-
-
+\- Referensi data nutrisi makanan: https://www.fatsecret.co.id/
 
 Informasi yang digunakan meliputi:
-
-
 
 \- Energi
 
@@ -470,31 +357,17 @@ Informasi yang digunakan meliputi:
 
 \- Karbohidrat
 
-
-
 \---
-
-
 
 \## 🖼️ Contoh Dataset
 
-
-
 !\[Dataset](images/dataset.png)
-
-
 
 \---
 
-
-
 \# 📋 Hasil Keluaran Sistem
 
-
-
 Sistem menghasilkan:
-
-
 
 \- Nama makanan
 
@@ -508,31 +381,17 @@ Sistem menghasilkan:
 
 \- Karbohidrat
 
-
-
 \---
-
-
 
 \## 🖼️ Contoh Hasil Sistem
 
-
-
 !\[Output](images/output.png)
-
-
 
 \---
 
-
-
 \# 🚀 Cara Menjalankan Aplikasi
 
-
-
 \## Clone Repository
-
-
 
 ```bash
 
@@ -540,11 +399,7 @@ git clone https://github.com/username/project.git
 
 ```
 
-
-
 \## Install Library
-
-
 
 ```bash
 
@@ -552,11 +407,7 @@ pip install -r requirements.txt
 
 ```
 
-
-
 \## Menjalankan Streamlit
-
-
 
 ```bash
 
@@ -564,69 +415,37 @@ streamlit run app.py
 
 ```
 
-
-
 \---
-
-
 
 \# 💻 Platform Pengembangan
 
-
-
 \- Google Colab
+
+\- Visual Studio Code
 
 \- Google Drive
 
 \- Streamlit
 
-
-
 \---
-
-
 
 \# 👨‍💻 Pengembang
 
-
-
 \*\*Yogi Irawan\*\*
-
-
 
 🎓 Mahasiswa S1 Informatika
 
+🤖 Bidang Minat: Artificial Intelligence & Computer Vision
 
+📧 Email: yogiirawan490@gmail.com
 
-🤖 Bidang Minat: Artificial Intelligence \& Computer Vision
+💼 LinkedIn: https://www.linkedin.com/in/yogi-irawan-ab146a387
 
-
-
-📧 Email:
-
-yogiirawan490@gmail.com
-
-
-
-💼 LinkedIn:
-
-https://www.linkedin.com/in/yogi-irawan-ab146a387
-
-
-
-🐙 GitHub:
-
-https://github.com/username
-
-
+🐙 GitHub: https://github.com/username
 
 \---
 
-
-
 \# 📄 Lisensi
 
-
-
-Proyek ini dikembangkan untuk keperluan penelitian akademik dan pendidikan.
-
+PMIT License
+Copyright (c) 2026 Yogi irawan
