@@ -30,19 +30,19 @@ In addition to food classification, the application automatically displays nutri
 
 ---
 
-### Prediction Result
+### Prediction Result and Nutritional Information
 
 > Predicted food category along with its confidence score.
 
-![Prediction](images/prediksi.png)
+![Prediction](IMAGES/prediksi.png)
 
 ---
 
-### Nutritional Information
+### 🎥 Live Demo / Workflow
 
-> Automatically displays calories, protein, fat, and carbohydrates.
+> Interactive classification process from image upload to nutritional evaluation.
 
-![Nutrition](images/gizi.png)
+![Demo Application](IMAGES/demo.gif)
 
 ---
 

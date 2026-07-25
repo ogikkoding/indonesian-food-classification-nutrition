@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Abaikan semua file .pkl di dalam folder MODELS
+MODELS/*.pkl
