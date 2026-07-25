@@ -1,7 +1,6 @@
 # ============================================================
 # SISTEM KLASIFIKASI CITRA MAKANAN INDONESIA
 # Hybrid Transfer Learning ResNet50 + Support Vector Machine
-# PART 1 : USER INTERFACE
 # ============================================================
 import streamlit as st
 from PIL import Image
@@ -9,7 +8,6 @@ from PIL import Image
 # ============================================================
 # KONFIGURASI HALAMAN
 # ============================================================
-
 st.set_page_config(
     page_title="Klasifikasi Makanan Indonesia",
     page_icon="🍽️",
@@ -366,7 +364,6 @@ def load_database_gizi():
     Membaca database informasi nilai gizi
     """
     df = pd.read_csv("data_gizi_makanan_indonesia.csv")
-
     # Membersihkan nama kolom
     df.columns = df.columns.str.strip()
 
@@ -480,7 +477,6 @@ if uploaded_file is not None:
     # ========================================================
 
     if gizi is not None:
-
         hasil = f"""
 
 ==========================================
@@ -488,9 +484,7 @@ HASIL KLASIFIKASI MAKANAN INDONESIA
 ==========================================
 
 Nama Makanan : {kelas}
-
 Confidence : {score*100:.2f} %
-
 Informasi Nilai Gizi (100 gram)
 
 Energi       : {gizi['Energi (kkal/100 g)']} kkal
@@ -501,7 +495,6 @@ Karbohidrat  : {gizi['Karbohidrat (g/100 g)']} g
 Sumber Data :
 {gizi['Sumber Data']}
 """
-
         st.download_button(
             label="📥 Download Hasil Prediksi",
             data=hasil,
@@ -512,21 +505,14 @@ Sumber Data :
 # ============================================================
 # FOOTER
 # ============================================================
-
 st.divider()
-
 st.markdown(
 """
 <div style="text-align:center; color:#808080; font-size:14px;">
-
 <b>Sistem Klasifikasi Citra Makanan Indonesia</b><br>
-
 Hybrid Transfer Learning ResNet50 + Support Vector Machine (SVM)<br>
-
 Penyajian Informasi Nilai Gizi Indonesia<br><br>
-
 Developed by <b>Yogi Irawan</b><br>
-
 <a href="https://github.com/ogikkoding" target="_blank">
 github.com/ogikkoding
 </a>
