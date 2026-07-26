@@ -42,7 +42,7 @@ Selain melakukan klasifikasi makanan, aplikasi ini juga secara otomatis menampil
 
 > Proses klasifikasi interaktif mulai dari pengunggahan gambar hingga evaluasi nilai gizi.
 
-![Demo Application](IMAGES/demo.gif)
+![Demo Application](IMAGES/gizi_makanan.gif)
 
 ---
 
@@ -73,47 +73,7 @@ Selain melakukan klasifikasi makanan, aplikasi ini juga secara otomatis menampil
 
 ---
 
-# 🔄 Alur Sistem
-
-```text
-Dataset
-   │
-   ▼
-Prapemrosesan Citra
-   │
-   ▼
-Transfer Learning ResNet50
-   │
-   ▼
-Ekstraksi Fitur
-   │
-   ▼
-Vektor Fitur
-   │
-   ▼
-StandardScaler
-   │
-   ▼
-Support Vector Machine
-   │
-   ▼
-Klasifikasi Makanan
-   │
-   ▼
-Pencarian Database Gizi
-   │
-   ▼
-Informasi Nilai Gizi
-   │
-   ▼
-Aplikasi Web Streamlit
-```
-
----
-
-## 🖼️ Diagram Alur Sistem
-
-## 🖼️ Diagram Alur Sistem
+## 🖼️ Diagram Alur Kerja Sistem
 
 ```mermaid
 graph TD
@@ -128,50 +88,6 @@ graph TD
     I --> J[Informasi Nilai Gizi]
     J --> K[Aplikasi Web Streamlit]
 ```
-
----
-
-# 🏗️ Arsitektur Sistem
-
-```text
-Citra Makanan
-      │
-      ▼
-Prapemrosesan Citra
-      │
-      ▼
-ResNet50
-      │
-      ▼
-Ekstraksi Fitur
-      │
-      ▼
-Vektor Fitur
-      │
-      ▼
-StandardScaler
-      │
-      ▼
-Support Vector Machine
-      │
-      ▼
-Prediksi
-      │
-      ▼
-Database Nilai Gizi
-      │
-      ▼
-Informasi Gizi
-      │
-      ▼
-Aplikasi Web Streamlit
-```
-
----
-
-## 🖼️ Diagram Arsitektur
-
-![Architecture](images/architecture.png)
 
 ---
 
@@ -263,7 +179,7 @@ Informasi kandungan gizi yang digunakan meliputi:
 
 ## 🖼️ Contoh Dataset
 
-![Dataset](images/dataset.png)
+![Dataset](IMAGES/dataset_makanan.png)
 
 ---
 
@@ -277,12 +193,6 @@ Setelah proses klasifikasi selesai, aplikasi akan menampilkan informasi sebagai 
 - 🥩 Protein
 - 🧈 Lemak
 - 🍚 Karbohidrat
-
----
-
-## 🖼️ Contoh Output
-
-![Output](images/output.png)
 
 ---
 
