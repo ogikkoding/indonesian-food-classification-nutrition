@@ -113,7 +113,21 @@ Aplikasi Web Streamlit
 
 ## 🖼️ Diagram Alur Sistem
 
-![Pipeline](images/pipeline.png)
+## 🖼️ Diagram Alur Sistem
+
+```mermaid
+graph TD
+    A[Dataset] --> B[Prapemrosesan Citra]
+    B --> C[Transfer Learning ResNet50]
+    C --> D[Ekstraksi Fitur]
+    D --> E[Vektor Fitur]
+    E --> F[StandardScaler]
+    F --> G[Support Vector Machine]
+    G --> H[Klasifikasi Makanan]
+    H --> I[Pencarian Database Gizi]
+    I --> J[Informasi Nilai Gizi]
+    J --> K[Aplikasi Web Streamlit]
+```
 
 ---
 
