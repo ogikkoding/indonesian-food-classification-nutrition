@@ -42,7 +42,7 @@ Selain melakukan klasifikasi makanan, aplikasi ini juga secara otomatis menampil
 
 > Proses klasifikasi interaktif mulai dari pengunggahan gambar hingga evaluasi nilai gizi.
 
-![Demo Application](IMAGES/gizi_makanan.gif)
+![Demo Application](IMAGES/Gizi_makanan.gif)
 
 ---
 
