@@ -8,6 +8,10 @@
 
 > Sistem klasifikasi citra makanan Indonesia berbasis web menggunakan **Streamlit** yang menerapkan pendekatan **Hybrid Deep Learning dan Machine Learning**, yaitu **ResNet50** sebagai ekstraktor fitur dan **Support Vector Machine (SVM)** sebagai pengklasifikasi. Aplikasi juga dilengkapi dengan fitur penampilan informasi nilai gizi secara otomatis berdasarkan hasil prediksi.
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://indonesian-food-classification-nutrition-9xvateh5opm4339vazvkd.streamlit.app/)
+
+🚀 **Live Demo:** [Coba Aplikasi Web di Sini](https://indonesian-food-classification-nutrition-9xvateh5opm4339vazvkd.streamlit.app/)
+
 ---
 
 # 📖 Deskripsi
