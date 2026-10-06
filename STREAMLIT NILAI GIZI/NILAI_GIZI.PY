@@ -164,6 +164,16 @@ st.sidebar.info("""
 """)
 st.sidebar.success("Status Model: Siap Digunakan")
 
+import os
+
+# ============================================================
+# LOKASI FOLDER DYNAMIC (ROOT REPOSITORY)
+# ============================================================
+# Mengambil path folder root utama repositori
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MODEL_DIR = os.path.join(BASE_DIR, "MODELS")
+DATASET_DIR = os.path.join(BASE_DIR, "DATASET")
+
 # ============================================================
 # LOAD MODEL & DATABASE (CACHED)
 # ============================================================
@@ -187,20 +197,21 @@ def load_feature_extractor():
 
 @st.cache_resource
 def load_svm():
-    # Menggunakan Relative Path agar kompatibel di semua komputer
-    return joblib.load("../MODELS/svm_model.pkl")
+    return joblib.load(os.path.join(MODEL_DIR, "svm_model.pkl"))
 
 @st.cache_resource
 def load_class_indices():
-    return joblib.load("../MODELS/class_indices.pkl")
+    return joblib.load(os.path.join(MODEL_DIR, "class_indices.pkl"))
 
 @st.cache_resource
 def load_scaler():
-    return joblib.load("../MODELS/scaler.pkl")
+    return joblib.load(os.path.join(MODEL_DIR, "scaler.pkl"))
 
 @st.cache_data
 def load_database_gizi():
-    df = pd.read_csv("data_gizi_makanan_indonesia.csv")
+    # Mengarahkan ke folder DATASET di root
+    csv_path = os.path.join(DATASET_DIR, "data_gizi_makanan_indonesia.csv")
+    df = pd.read_csv(csv_path)
     df.columns = df.columns.str.strip()
     df["Nama Makanan"] = df["Nama Makanan"].astype(str).str.strip()
     return df
