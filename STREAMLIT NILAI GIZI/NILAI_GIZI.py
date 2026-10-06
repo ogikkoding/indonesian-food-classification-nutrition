@@ -2,6 +2,7 @@
 # SISTEM KLASIFIKASI CITRA MAKANAN INDONESIA
 # Hybrid Transfer Learning ResNet50 + Support Vector Machine
 # ============================================================
+import os
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -13,7 +14,7 @@ from timm.data import resolve_model_data_config
 from timm.data.transforms_factory import create_transform
 
 # ============================================================
-# KONFIGURASI HALAMAN
+# KONFIGURASI HALAMAN (HARUS DIPANGGIL PERTAMA KALI)
 # ============================================================
 st.set_page_config(
     page_title="Klasifikasi Makanan Indonesia",
@@ -21,6 +22,13 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# ============================================================
+# LOKASI FOLDER DYNAMIC (ROOT REPOSITORY)
+# ============================================================
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MODEL_DIR = os.path.join(BASE_DIR, "MODELS")
+DATASET_DIR = os.path.join(BASE_DIR, "DATASET")
 
 # ============================================================
 # CSS CUSTOM MODERN
@@ -107,7 +115,7 @@ st.markdown("""
     transform: scale(1.02);
 }
 
-/* File Uploader (Gelap & Menyatu dengan Dark Theme) */
+/* File Uploader */
 [data-testid="stFileUploader"] {
     border: 2px dashed #00897B;
     border-radius: 15px;
@@ -115,12 +123,12 @@ st.markdown("""
     background: rgba(15, 23, 42, 0.6);
 }
 
-/* Image*/
+/* Image */
 img {
-    max-width: 40%; /* Mengatur lebar maksimal gambar (bisa diubah misal: 50%, 60%, 70%) */
-    height: auto;   /* Menjaga rasio gambar agar tidak gepeng */
+    max-width: 40%;
+    height: auto;
     display: block;
-    margin: 0 auto; /* Memposisikan gambar persis di tengah */
+    margin: 0 auto;
     border-radius: 18px;
     box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.25);
 }
@@ -164,16 +172,6 @@ st.sidebar.info("""
 """)
 st.sidebar.success("Status Model: Siap Digunakan")
 
-import os
-
-# ============================================================
-# LOKASI FOLDER DYNAMIC (ROOT REPOSITORY)
-# ============================================================
-# Mengambil path folder root utama repositori
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL_DIR = os.path.join(BASE_DIR, "MODELS")
-DATASET_DIR = os.path.join(BASE_DIR, "DATASET")
-
 # ============================================================
 # LOAD MODEL & DATABASE (CACHED)
 # ============================================================
@@ -209,7 +207,6 @@ def load_scaler():
 
 @st.cache_data
 def load_database_gizi():
-    # Mengarahkan ke folder DATASET di root
     csv_path = os.path.join(DATASET_DIR, "data_gizi_makanan_indonesia.csv")
     df = pd.read_csv(csv_path)
     df.columns = df.columns.str.strip()
@@ -271,7 +268,6 @@ with col_preview:
 # ============================================================
 if uploaded_file is not None:
     with st.spinner("Sedang melakukan klasifikasi..."):
-        # Inference Pipeline
         img = preprocess_image(image)
         feature = extract_feature(img)
         feature = scaler.transform(feature)
