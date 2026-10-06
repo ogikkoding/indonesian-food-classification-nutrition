@@ -8,6 +8,10 @@
 
 > A web-based Indonesian food image classification system developed using a **Hybrid Deep Learning and Machine Learning** approach. The application employs **ResNet50** as a deep feature extractor and **Support Vector Machine (SVM)** as the classifier, while automatically presenting nutritional information based on prediction results.
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://indonesian-food-classification-nutrition-9xvateh5opm4339vazvkd.streamlit.app/)
+
+🚀 **Live Demo:** [Try the Web Application Here](https://indonesian-food-classification-nutrition-9xvateh5opm4339vazvkd.streamlit.app/)
+
 ---
 
 # 📖 Overview
