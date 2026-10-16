@@ -266,7 +266,7 @@ https://www.linkedin.com/in/yogi-irawan-ab146a387
 
 🐙 GitHub
 
-https://github.com/username
+https://github.com/ogikkoding
 
 ---
 
@@ -275,8 +275,6 @@ https://github.com/username
 Kontribusi terhadap proyek ini sangat terbuka.
 
 Apabila Anda menemukan bug, memiliki saran pengembangan, atau ingin menambahkan fitur baru, silakan membuat **Issue** maupun **Pull Request** pada repository ini.
-
----
 
 # ⭐ Dukungan
 
